@@ -1,0 +1,1 @@
+from app.identidock import app
