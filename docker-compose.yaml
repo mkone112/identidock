@@ -7,6 +7,11 @@ services:
     environment:
       ENV: "${ENV}"
     env_file:
+      - base.env
       - "${ENV}.env"
     volumes:
       - ./app:/app
+    links:
+      - dnmonster
+  dnmonster:
+    image: amouat/dnmonster
