@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
+default_name = 'Joe Blogs'
+
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def get_identicon():
+    return render_template('index.html', name=default_name)
 
 
 if __name__ == '__main__':

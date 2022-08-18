@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form method="POST">
+    Hello <input type="text" name="name" value="{{ name }}">
+    <input type="submit" value="submit">
+  </form>
+  <p>You look like a:</p>
+  <img src="/monster/monster.png" alt="avatar"/>
+{% endblock %}
